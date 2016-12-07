@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C9A43AF99BB37DE8214F388 /* Pods_Phoenix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E2E2619CFDF349BF9C2FD9 /* Pods_Phoenix.framework */; };
 		CE0FD88B1DF8A17D00D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD88A1DF8A17D00D7BEE4 /* AppDelegate.swift */; };
 		CE0FD88D1DF8A17D00D7BEE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD88C1DF8A17D00D7BEE4 /* ViewController.swift */; };
 		CE0FD8901DF8A17D00D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD88E1DF8A17D00D7BEE4 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0267895CA47B48518EE059D3 /* Pods-Phoenix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phoenix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Phoenix/Pods-Phoenix.release.xcconfig"; sourceTree = "<group>"; };
+		55E2E2619CFDF349BF9C2FD9 /* Pods_Phoenix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phoenix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD8871DF8A17D00D7BEE4 /* Phoenix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phoenix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD88A1DF8A17D00D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FD88C1DF8A17D00D7BEE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		CE0FD8911DF8A17D00D7BEE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0FD8941DF8A17D00D7BEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0FD8961DF8A17D00D7BEE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE051CA448B793976E26ABF /* Pods-Phoenix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phoenix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Phoenix/Pods-Phoenix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9A43AF99BB37DE8214F388 /* Pods_Phoenix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0646F4CD545F1F33377C6E26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAE051CA448B793976E26ABF /* Pods-Phoenix.debug.xcconfig */,
+				0267895CA47B48518EE059D3 /* Pods-Phoenix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		13C1E3F0A408E0C9AC6215CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55E2E2619CFDF349BF9C2FD9 /* Pods_Phoenix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE0FD87E1DF8A17D00D7BEE4 = {
 			isa = PBXGroup;
 			children = (
 				CE0FD8891DF8A17D00D7BEE4 /* Phoenix */,
 				CE0FD8881DF8A17D00D7BEE4 /* Products */,
+				0646F4CD545F1F33377C6E26 /* Pods */,
+				13C1E3F0A408E0C9AC6215CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0FD8991DF8A17D00D7BEE4 /* Build configuration list for PBXNativeTarget "Phoenix" */;
 			buildPhases = (
+				948A80B158AF8B157CB0F85E /* [CP] Check Pods Manifest.lock */,
 				CE0FD8831DF8A17D00D7BEE4 /* Sources */,
 				CE0FD8841DF8A17D00D7BEE4 /* Frameworks */,
 				CE0FD8851DF8A17D00D7BEE4 /* Resources */,
+				029E16FBCAFB516C456A40EA /* [CP] Embed Pods Frameworks */,
+				6DF654B8E8805EF89C098503 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		029E16FBCAFB516C456A40EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Phoenix/Pods-Phoenix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF654B8E8805EF89C098503 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Phoenix/Pods-Phoenix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		948A80B158AF8B157CB0F85E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE0FD8831DF8A17D00D7BEE4 /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		CE0FD89A1DF8A17D00D7BEE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE051CA448B793976E26ABF /* Pods-Phoenix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Phoenix/Info.plist;
@@ -269,6 +345,7 @@
 		};
 		CE0FD89B1DF8A17D00D7BEE4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0267895CA47B48518EE059D3 /* Pods-Phoenix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Phoenix/Info.plist;
