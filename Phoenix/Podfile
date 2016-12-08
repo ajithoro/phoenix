@@ -8,5 +8,6 @@ target 'Phoenix' do
   # Pods for Phoenix
   pod 'Alamofire', '~> 4.0'
   pod 'ObjectMapper', '~> 2.2'
+  pod 'SwiftyJSON'
 
 end
