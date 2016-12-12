@@ -13,6 +13,8 @@
 		4FD374C11DFE54D700CD3DB6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD374C01DFE54D700CD3DB6 /* BaseViewController.swift */; };
 		4FD374C31DFE579500CD3DB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD374C21DFE579500CD3DB6 /* User.swift */; };
 		4FD374C51DFE95B400CD3DB6 /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD374C41DFE95B400CD3DB6 /* AnswersViewController.swift */; };
+		4FE4EF621DFEA8FF00F28891 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4EF611DFEA8FF00F28891 /* Answer.swift */; };
+		4FE4EF641DFEAA4D00F28891 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4EF631DFEAA4D00F28891 /* Question.swift */; };
 		CE0FD88B1DF8A17D00D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD88A1DF8A17D00D7BEE4 /* AppDelegate.swift */; };
 		CE0FD8901DF8A17D00D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD88E1DF8A17D00D7BEE4 /* Main.storyboard */; };
 		CE0FD8921DF8A17D00D7BEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8911DF8A17D00D7BEE4 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		4FD374C01DFE54D700CD3DB6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = viewcontrollers/BaseViewController.swift; sourceTree = "<group>"; };
 		4FD374C21DFE579500CD3DB6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = models/User.swift; sourceTree = "<group>"; };
 		4FD374C41DFE95B400CD3DB6 /* AnswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswersViewController.swift; path = viewcontrollers/AnswersViewController.swift; sourceTree = "<group>"; };
+		4FE4EF611DFEA8FF00F28891 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Answer.swift; path = models/Answer.swift; sourceTree = "<group>"; };
+		4FE4EF631DFEAA4D00F28891 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = models/Question.swift; sourceTree = "<group>"; };
 		55E2E2619CFDF349BF9C2FD9 /* Pods_Phoenix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phoenix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD8871DF8A17D00D7BEE4 /* Phoenix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phoenix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD88A1DF8A17D00D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				4FD374C21DFE579500CD3DB6 /* User.swift */,
+				4FE4EF611DFEA8FF00F28891 /* Answer.swift */,
+				4FE4EF631DFEAA4D00F28891 /* Question.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 				4FD374C51DFE95B400CD3DB6 /* AnswersViewController.swift in Sources */,
 				4FD374BF1DFE52A700CD3DB6 /* Constants.swift in Sources */,
 				CEDE7CE81DF9C3C80040474D /* ViewController.swift in Sources */,
+				4FE4EF621DFEA8FF00F28891 /* Answer.swift in Sources */,
 				4FD374BD1DFE520700CD3DB6 /* UsersViewController.swift in Sources */,
+				4FE4EF641DFEAA4D00F28891 /* Question.swift in Sources */,
 				CEDE7CE61DF9C3B90040474D /* NetworkManager.swift in Sources */,
 				CE0FD88B1DF8A17D00D7BEE4 /* AppDelegate.swift in Sources */,
 				4FD374C11DFE54D700CD3DB6 /* BaseViewController.swift in Sources */,
