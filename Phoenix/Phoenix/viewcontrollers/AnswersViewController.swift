@@ -51,7 +51,7 @@ class AnswersViewController: BaseViewController {
                     }
                     
                     if self.answers.isEmpty {
-                        self.showAlertMessage(title: "", message: "No answers found. Try again.")
+                        self.showAlertMessage(title: "", message: "No answers found. Try other user.")
                     } else {
                         self.getQuestions()
                     }
@@ -69,12 +69,14 @@ class AnswersViewController: BaseViewController {
     
     // get questions for a user
     func getQuestions() {
+        // adding all questions network calls to dispatch group
+        let questionsGroup = DispatchGroup.init()
         
         for answer in self.answers {
             if let questionId = answer.questionId {
+                questionsGroup.enter()
                 self.showActivityIndicator()
                 NetworkManager.sharedInstance.getQuestion(questionId: String(questionId), completionHandler: {(response) in
-                    self.hideActivityIndicator()
                     switch response.result {
                     case .success(let value):
                         let json = JSON(value)
@@ -89,9 +91,18 @@ class AnswersViewController: BaseViewController {
                     case .failure(let error):
                         print("error: \(error.localizedDescription)")
                     }
+                    
+                    questionsGroup.leave()
                 })
             }
         }
+        
+        questionsGroup.notify(queue: DispatchQueue.main, execute: {
+            self.hideActivityIndicator()
+            if self.questions.isEmpty {
+                self.showAlertMessage(title: "", message: "No question found. Try other user.")
+            }
+        })
     }
     
     /*

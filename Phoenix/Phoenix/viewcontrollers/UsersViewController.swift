@@ -18,7 +18,7 @@ class UsersViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "StackOverflow Users"
+        self.navigationItem.title = "Users"
         self.automaticallyAdjustsScrollViewInsets = false
         // TableView
         self.tableViewUsers.separatorStyle = .singleLine

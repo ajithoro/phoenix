@@ -8,6 +8,9 @@
 
 import Foundation
 
+// API Key 
+//TODO: change api key here
+let kAPIKey:String = "YOUR_API_KEY"
 // Segues
 let kSegueUsers:String = "SegueUsers"
 let kSegueAnswers:String = "SegueAnswers"
