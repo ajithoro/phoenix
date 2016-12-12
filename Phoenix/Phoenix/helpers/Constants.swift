@@ -9,6 +9,7 @@
 import Foundation
 
 let kSegueUsers:String = "SegueUsers"
+let kSegueAnswers:String = "SegueAnswers"
 let kBaseUrl:String = "https://api.stackexchange.com/2.2/"
 let kCellUser:String = "CellUser"
 

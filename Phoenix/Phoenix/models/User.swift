@@ -16,6 +16,10 @@ class User: Mappable {
     var profileImage:String?
     var displayName:String?
     
+    init() {
+        
+    }
+    
     required init?(map: Map) {
         
     }

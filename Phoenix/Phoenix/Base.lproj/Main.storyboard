@@ -100,11 +100,30 @@
                     <navigationItem key="navigationItem" id="9io-gl-JtH"/>
                     <connections>
                         <outlet property="tableViewUsers" destination="SCd-ml-lvC" id="KBb-XV-K4i"/>
+                        <segue destination="qcx-J2-BBH" kind="show" identifier="SegueAnswers" id="48Q-FK-Ypa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3d-rS-tMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1944.8" y="122.78860569715144"/>
+        </scene>
+        <!--Answers View Controller-->
+        <scene sceneID="GQC-dE-ngr">
+            <objects>
+                <viewController id="qcx-J2-BBH" customClass="AnswersViewController" customModule="Phoenix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dtH-6D-7EC"/>
+                        <viewControllerLayoutGuide type="bottom" id="eNb-6u-wXW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E6o-XF-MCY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYt-7E-ajl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2764" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tU0-Ro-ggn">

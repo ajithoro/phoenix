@@ -58,15 +58,17 @@ class UsersViewController: BaseViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == kSegueAnswers) {
+            let destinationVC = segue.destination as! AnswersViewController
+            destinationVC.user = sender as! User
+        }
     }
-    */
 
 }
 
@@ -87,6 +89,7 @@ extension UsersViewController: UITableViewDataSource {
 extension UsersViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let user = self.users[indexPath.row]
+        self.performSegue(withIdentifier: kSegueAnswers, sender: user)
     }
 }

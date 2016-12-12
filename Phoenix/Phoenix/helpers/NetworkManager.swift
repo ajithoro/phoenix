@@ -25,4 +25,27 @@ class NetworkManager {
         }
     }
     
+    func getAnswers(userId:String, completionHandler:CompletionClosure) {
+        let answersUrl:String = kBaseUrl + "users/\(userId)/answers?order=desc&sort=activity&site=stackoverflow"
+        Alamofire.request(answersUrl).responseJSON { (response) in
+            completionHandler!(response)
+        }
+    }
+    
+    func getQuestion(questionId:String, completionHandler:CompletionClosure) {
+        let questionUrl:String = kBaseUrl + "questions/\(questionId)?order=desc&sort=activity&site=stackoverflow"
+        Alamofire.request(questionUrl).responseJSON { (response) in
+            completionHandler!(response)
+        }
+    }
+    
+    /*
+    func getAnswer(answerId:String, completionHandler:CompletionClosure) {
+        let answerUrl:String = kBaseUrl + "answers/\(answerId)?order=desc&sort=activity&site=stackoverflow"
+        Alamofire.request(answerUrl).responseJSON { (response) in
+            completionHandler!(response)
+        }
+    }
+    */
+    
 }
