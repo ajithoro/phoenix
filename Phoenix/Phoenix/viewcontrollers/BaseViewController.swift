@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     var activityIndicatorView: UIActivityIndicatorView!
+    var alert:UIAlertController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class BaseViewController: UIViewController {
         self.activityIndicatorView.center = self.view.center
         self.activityIndicatorView.hidesWhenStopped = true
         self.view.addSubview(self.activityIndicatorView)
+        
+        self.alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +37,15 @@ class BaseViewController: UIViewController {
     func hideActivityIndicator() {
         self.activityIndicatorView.stopAnimating()
     }
-
+    
+    func showAlertMessage(title:String, message: String) {
+        self.alert.title = title
+        self.alert.message = message
+        let action:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        self.alert.addAction(action)
+        self.present(self.alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

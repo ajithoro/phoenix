@@ -73,9 +73,34 @@
                     <view key="view" contentMode="scaleToFill" id="xbl-9G-dWD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-ml-lvC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellUser" id="qYk-W6-fIH">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qYk-W6-fIH" id="pLy-LZ-Vam">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SCd-ml-lvC" secondAttribute="trailing" id="14h-mQ-w50"/>
+                            <constraint firstItem="SCd-ml-lvC" firstAttribute="top" secondItem="g1S-Cj-nNq" secondAttribute="bottom" id="dkb-W3-JB2"/>
+                            <constraint firstItem="nlS-c2-miW" firstAttribute="top" secondItem="SCd-ml-lvC" secondAttribute="bottom" id="hUL-bW-Y7R"/>
+                            <constraint firstItem="SCd-ml-lvC" firstAttribute="leading" secondItem="xbl-9G-dWD" secondAttribute="leading" id="yeg-eQ-Tc8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9io-gl-JtH"/>
+                    <connections>
+                        <outlet property="tableViewUsers" destination="SCd-ml-lvC" id="KBb-XV-K4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3d-rS-tMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
