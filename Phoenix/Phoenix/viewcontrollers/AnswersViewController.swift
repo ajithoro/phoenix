@@ -22,8 +22,10 @@ class AnswersViewController: BaseViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Questions Asked"
         self.automaticallyAdjustsScrollViewInsets = false
+        // TableView
         self.tableViewAnswers.delegate = self
         self.tableViewAnswers.dataSource = self
+        // get answers for a user
         self.getAnswers()
     }
 
@@ -32,12 +34,12 @@ class AnswersViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // get answers for a user
     func getAnswers() {
         if let userId = self.user.userId {
             self.showActivityIndicator()
             NetworkManager.sharedInstance.getAnswers(userId: String(userId), completionHandler: {(response) in
                 self.hideActivityIndicator()
-                print("resp: \(response)")
                 switch response.result {
                 case .success(let value):
                     let json = JSON(value)
@@ -65,24 +67,25 @@ class AnswersViewController: BaseViewController {
        
     }
     
+    // get questions for a user
     func getQuestions() {
         
         for answer in self.answers {
-            self.showActivityIndicator()
             if let questionId = answer.questionId {
+                self.showActivityIndicator()
                 NetworkManager.sharedInstance.getQuestion(questionId: String(questionId), completionHandler: {(response) in
                     self.hideActivityIndicator()
                     switch response.result {
                     case .success(let value):
                         let json = JSON(value)
                         let questionJson = json["items"]
-                        if let questionArray = Mapper<Question>().mapArray(JSONString: questionJson.rawString()!) {
-                            self.questions.append(contentsOf: questionArray)
-                            self.tableViewAnswers.reloadData()
-//                            for question in self.questions {
-//                                print("q: \(question.title ?? "")")
-//                            }
+                        if let jsonString = questionJson.rawString() {
+                            if let questionArray = Mapper<Question>().mapArray(JSONString: jsonString) {
+                                self.questions.append(contentsOf: questionArray)
+                                self.tableViewAnswers.reloadData()
+                            }
                         }
+                        
                     case .failure(let error):
                         print("error: \(error.localizedDescription)")
                     }

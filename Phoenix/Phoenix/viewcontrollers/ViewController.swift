@@ -26,7 +26,7 @@ class ViewController: BaseViewController {
     }
 
     @IBAction func getUsersButtonClicked(_ sender: UIButton) {
-        performSegue(withIdentifier: kSegueUsers, sender: sender)
+        self.performSegue(withIdentifier: kSegueUsers, sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

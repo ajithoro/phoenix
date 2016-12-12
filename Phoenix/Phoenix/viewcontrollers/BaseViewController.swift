@@ -17,11 +17,12 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = false
+        // Activity Indicator
         self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         self.activityIndicatorView.center = self.view.center
         self.activityIndicatorView.hidesWhenStopped = true
         self.view.addSubview(self.activityIndicatorView)
-        
+        // Alert Controller
         self.alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
     }
 
@@ -38,6 +39,7 @@ class BaseViewController: UIViewController {
         self.activityIndicatorView.stopAnimating()
     }
     
+    // Show alert message
     func showAlertMessage(title:String, message: String) {
         self.alert.title = title
         self.alert.message = message

@@ -18,11 +18,13 @@ class UsersViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationItem.title = "Users"
+        self.navigationItem.title = "StackOverflow Users"
         self.automaticallyAdjustsScrollViewInsets = false
+        // TableView
         self.tableViewUsers.separatorStyle = .singleLine
         self.tableViewUsers.delegate = self
         self.tableViewUsers.dataSource = self
+        // get stack overflow users
         self.getUsers()
     }
 
@@ -31,6 +33,7 @@ class UsersViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // get stack overflow users
     func getUsers() {
         self.showActivityIndicator()
         NetworkManager.sharedInstance.getUsers { (response) in
@@ -80,7 +83,7 @@ extension UsersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kCellUser, for: indexPath)
-        cell.textLabel?.text = self.users[indexPath.row].displayName
+        cell.textLabel?.text = self.users[indexPath.row].displayName ?? ""
         return cell
     }
     

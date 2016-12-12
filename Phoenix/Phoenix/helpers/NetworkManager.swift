@@ -11,6 +11,7 @@ import Alamofire
 
 class NetworkManager {
     
+    // Singleton Class
     static let sharedInstance = NetworkManager()
     typealias CompletionClosure = ((DataResponse<Any>) -> Void)?
     
@@ -18,6 +19,7 @@ class NetworkManager {
         
     }
     
+    // get stack overflow users
     func getUsers(completionHandler: CompletionClosure) {
         let usersUrl:String = kBaseUrl + "users?order=desc&sort=reputation&site=stackoverflow"
         Alamofire.request(usersUrl).responseJSON { (response) in
@@ -25,6 +27,7 @@ class NetworkManager {
         }
     }
     
+    // get answers answered by a user
     func getAnswers(userId:String, completionHandler:CompletionClosure) {
         let answersUrl:String = kBaseUrl + "users/\(userId)/answers?order=desc&sort=activity&site=stackoverflow"
         Alamofire.request(answersUrl).responseJSON { (response) in
@@ -32,6 +35,7 @@ class NetworkManager {
         }
     }
     
+    // get question from question id
     func getQuestion(questionId:String, completionHandler:CompletionClosure) {
         let questionUrl:String = kBaseUrl + "questions/\(questionId)?order=desc&sort=activity&site=stackoverflow"
         Alamofire.request(questionUrl).responseJSON { (response) in
