@@ -18,4 +18,11 @@ class NetworkManager {
         
     }
     
+    func getUsers(completionHandler: CompletionClosure) {
+        let usersUrl:String = kBaseUrl + "users?order=desc&sort=reputation&site=stackoverflow"
+        Alamofire.request(usersUrl).responseJSON { (response) in
+            completionHandler!(response)
+        }
+    }
+    
 }

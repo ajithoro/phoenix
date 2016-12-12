@@ -14,11 +14,20 @@ class UsersViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Users"
+        self.getUsers()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getUsers() {
+        self.showActivityIndicator()
+        NetworkManager.sharedInstance.getUsers { (response) in
+            self.hideActivityIndicator()
+            print(response)
+        }
     }
     
 

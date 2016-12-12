@@ -9,4 +9,5 @@
 import Foundation
 
 let kSegueUsers:String = "SegueUsers"
+let kBaseUrl:String = "https://api.stackexchange.com/2.2/"
 
