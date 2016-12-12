@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qYk-W6-fIH" id="pLy-LZ-Vam">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -118,12 +118,37 @@
                     <view key="view" contentMode="scaleToFill" id="E6o-XF-MCY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gr-5l-B48">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellAnswer" id="nvf-Zz-dST">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nvf-Zz-dST" id="GdU-71-tQG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eNb-6u-wXW" firstAttribute="top" secondItem="8gr-5l-B48" secondAttribute="bottom" id="VaV-ue-3iY"/>
+                            <constraint firstAttribute="trailing" secondItem="8gr-5l-B48" secondAttribute="trailing" id="a8h-0x-X14"/>
+                            <constraint firstItem="8gr-5l-B48" firstAttribute="leading" secondItem="E6o-XF-MCY" secondAttribute="leading" id="uSy-B8-tyh"/>
+                            <constraint firstItem="8gr-5l-B48" firstAttribute="top" secondItem="dtH-6D-7EC" secondAttribute="bottom" id="x1f-AR-xhN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableViewAnswers" destination="8gr-5l-B48" id="MBp-IZ-B1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYt-7E-ajl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="123"/>
+            <point key="canvasLocation" x="2764" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tU0-Ro-ggn">

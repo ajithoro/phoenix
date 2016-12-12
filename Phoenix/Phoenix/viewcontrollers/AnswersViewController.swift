@@ -15,11 +15,15 @@ class AnswersViewController: BaseViewController {
     var user: User = User()
     var answers:[Answer] = [Answer]()
     var questions:[Question] = [Question]()
+    @IBOutlet weak var tableViewAnswers: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Questions Asked"
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.tableViewAnswers.delegate = self
+        self.tableViewAnswers.dataSource = self
         self.getAnswers()
     }
 
@@ -74,9 +78,10 @@ class AnswersViewController: BaseViewController {
                         let questionJson = json["items"]
                         if let questionArray = Mapper<Question>().mapArray(JSONString: questionJson.rawString()!) {
                             self.questions.append(contentsOf: questionArray)
-                            for question in self.questions {
-                                print("q: \(question.title ?? "")")
-                            }
+                            self.tableViewAnswers.reloadData()
+//                            for question in self.questions {
+//                                print("q: \(question.title ?? "")")
+//                            }
                         }
                     case .failure(let error):
                         print("error: \(error.localizedDescription)")
@@ -107,4 +112,22 @@ class AnswersViewController: BaseViewController {
     }
     */
 
+}
+
+extension AnswersViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.questions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: kCellAnswer, for: indexPath)
+        cell.textLabel?.text = self.questions[indexPath.row].title ?? ""
+        return cell
+    }
+
+}
+
+extension AnswersViewController: UITableViewDelegate {
+    
 }
