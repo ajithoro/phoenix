@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func getUsersButtonClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: kSegueUsers, sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == kSegueUsers) {
+            
+        }
+    }
 
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C9A43AF99BB37DE8214F388 /* Pods_Phoenix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E2E2619CFDF349BF9C2FD9 /* Pods_Phoenix.framework */; };
+		4FD374BD1DFE520700CD3DB6 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD374BC1DFE520700CD3DB6 /* UsersViewController.swift */; };
+		4FD374BF1DFE52A700CD3DB6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD374BE1DFE52A700CD3DB6 /* Constants.swift */; };
+		4FD374C11DFE54D700CD3DB6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD374C01DFE54D700CD3DB6 /* BaseViewController.swift */; };
 		CE0FD88B1DF8A17D00D7BEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FD88A1DF8A17D00D7BEE4 /* AppDelegate.swift */; };
 		CE0FD8901DF8A17D00D7BEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD88E1DF8A17D00D7BEE4 /* Main.storyboard */; };
 		CE0FD8921DF8A17D00D7BEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FD8911DF8A17D00D7BEE4 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		0267895CA47B48518EE059D3 /* Pods-Phoenix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phoenix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Phoenix/Pods-Phoenix.release.xcconfig"; sourceTree = "<group>"; };
+		4FD374BC1DFE520700CD3DB6 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersViewController.swift; path = viewcontrollers/UsersViewController.swift; sourceTree = "<group>"; };
+		4FD374BE1DFE52A700CD3DB6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = helpers/Constants.swift; sourceTree = "<group>"; };
+		4FD374C01DFE54D700CD3DB6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = viewcontrollers/BaseViewController.swift; sourceTree = "<group>"; };
 		55E2E2619CFDF349BF9C2FD9 /* Pods_Phoenix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phoenix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD8871DF8A17D00D7BEE4 /* Phoenix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phoenix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FD88A1DF8A17D00D7BEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				CEDE7CE71DF9C3C80040474D /* ViewController.swift */,
+				4FD374BC1DFE520700CD3DB6 /* UsersViewController.swift */,
+				4FD374C01DFE54D700CD3DB6 /* BaseViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDE7CE51DF9C3B90040474D /* NetworkManager.swift */,
+				4FD374BE1DFE52A700CD3DB6 /* Constants.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -238,9 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD374BF1DFE52A700CD3DB6 /* Constants.swift in Sources */,
 				CEDE7CE81DF9C3C80040474D /* ViewController.swift in Sources */,
+				4FD374BD1DFE520700CD3DB6 /* UsersViewController.swift in Sources */,
 				CEDE7CE61DF9C3B90040474D /* NetworkManager.swift in Sources */,
 				CE0FD88B1DF8A17D00D7BEE4 /* AppDelegate.swift in Sources */,
+				4FD374C11DFE54D700CD3DB6 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
